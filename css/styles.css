@@ -336,6 +336,8 @@ nav#desktop-menu > ul.links .buy-book:focus > ul {
   width: 40%;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  width: 50%;
 }
 @media only screen and (max-width: 1491px) {
   .main section.sections .button {
