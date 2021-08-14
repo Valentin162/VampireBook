@@ -44,13 +44,4 @@ window.addEventListener('DOMContentLoaded', event => {
 			stores.style.display = 'none';
 		}
 	});
-
-	dropdown.addEventListener('focus', function() {
-		stores.style.display = 'block';
-	});
-
-	lastLink.addEventListener('focusout', function() {
-		console.log('none');
-		stores.style.display = 'none';
-	});
 });
