@@ -1,0 +1,383 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: white;
+  background: #003321;
+}
+
+.fixed {
+  position: fixed;
+}
+
+p {
+  line-height: 1.5;
+}
+
+header.header {
+  position: relative;
+  background: #020148;
+  margin: 0;
+  padding: 0;
+  top: 0;
+}
+@media only screen and (max-width: 950px) {
+  header.header {
+    height: 85px;
+  }
+}
+header.header #burger-menu {
+  display: none;
+  float: right;
+  color: white;
+  font-size: 3em;
+  background: #f33;
+  padding: 15px;
+}
+header.header #burger-menu:hover, header.header #burger-menu:focus {
+  color: black;
+  background: white;
+  transition: color 0.5s, background-color 0.5s;
+}
+@media only screen and (max-width: 950px) {
+  header.header #burger-menu {
+    display: block;
+  }
+}
+
+nav#desktop-menu {
+  margin: 0;
+  padding: 20px;
+}
+nav#desktop-menu > ul.links {
+  padding-top: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+@media only screen and (max-width: 950px) {
+  nav#desktop-menu > ul.links {
+    display: none;
+  }
+}
+nav#desktop-menu > ul.links > li {
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: -4px;
+  padding-left: 0;
+}
+nav#desktop-menu > ul.links > li > a {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  padding: 15px;
+}
+nav#desktop-menu > ul.links > li > a:hover, nav#desktop-menu > ul.links > li > a:focus {
+  transition: color 0.5s, background-color 0.5s;
+  color: black;
+  background: white;
+  border-bottom: 5px solid #600;
+}
+nav#desktop-menu > ul.links .buy-book {
+  position: relative;
+  display: inline-block;
+}
+nav#desktop-menu > ul.links .buy-book > ul {
+  position: absolute;
+  display: none;
+  padding-left: 0;
+  width: 150px;
+  margin-top: 20px;
+}
+nav#desktop-menu > ul.links .buy-book > ul > li {
+  display: block;
+  width: 100%;
+  background: #020148;
+  height: 100%;
+  width: 157px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+nav#desktop-menu > ul.links .buy-book > ul > li > a {
+  color: white;
+  text-decoration: none;
+  padding: 30px;
+  width: 100%;
+}
+nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul.links .buy-book > ul > li > a:focus {
+  background: white;
+  color: black;
+}
+nav#desktop-menu > ul.links .buy-book:focus > ul {
+  display: block;
+}
+
+#mobile-menu {
+  top: 0;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+  position: fixed;
+  z-index: 4;
+  background: black;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 15px;
+}
+#mobile-menu.shown {
+  display: flex;
+}
+#mobile-menu h2 {
+  font-size: 3em;
+  margin-top: 7em;
+}
+@media only screen and (max-width: 400px) {
+  #mobile-menu h2 {
+    font-size: 2em;
+  }
+}
+#mobile-menu ul.links {
+  list-style: none;
+  padding-left: 0;
+  font-size: 2rem;
+}
+#mobile-menu ul.links li {
+  margin-bottom: 15px;
+}
+#mobile-menu ul.links li a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+#mobile-menu ul.links li a:hover, #mobile-menu ul.links li a:focus {
+  text-decoration: underline;
+}
+#mobile-menu ul.links li ul {
+  list-style: none;
+  padding-top: 10px;
+}
+#mobile-menu ul.links li ul li a {
+  text-decoration: underline;
+}
+#mobile-menu ul.links li ul li::before {
+  content: "- ";
+}
+#mobile-menu button#close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3em;
+  background: none;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px;
+}
+#mobile-menu button#close-menu:focus, #mobile-menu button#close-menu:hover {
+  color: black;
+  background: white;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.main {
+  background: linear-gradient(180deg, #88231C 1.27%, #814033 48.14%, #2B231F 101.27%);
+  margin-top: 0;
+}
+.main h1 {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 2.5em;
+  width: 100%;
+  height: auto;
+  line-height: 150px;
+  margin-bottom: 0;
+  font-size: 3.5em;
+  white-space: wrap;
+}
+.main h2 {
+  text-align: center;
+}
+.main .break {
+  display: block;
+}
+.main .container {
+  width: 90%;
+  display: block;
+  margin: 1em auto;
+  margin-top: 0;
+  background-image: url("../assets/images/cover.png");
+  background-position: center;
+  background-attachment: fixed;
+}
+@media only screen and (max-width: 1421px) {
+  .main .container {
+    width: 100%;
+  }
+}
+.main section.sections {
+  margin-bottom: 0;
+  border-bottom: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1421px) {
+  .main section.sections {
+    flex-direction: column;
+  }
+  .main section.sections .fa-arrow-right {
+    transform: rotate(90deg);
+  }
+  .main section.sections .fa-arrow-left {
+    transform: rotate(270deg);
+  }
+  .main section.sections .fa-arrow-left, .main section.sections .fa-arrow-right {
+    margin-top: 5px;
+  }
+}
+.main section.sections h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+.main section.sections .heading {
+  width: 50%;
+  background: #060B36;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 1421px) {
+  .main section.sections .heading {
+    width: 100%;
+    height: 450px;
+  }
+}
+.main section.sections .text {
+  background: #192375;
+  width: 50%;
+  margin-bottom: 0;
+  margin-top: 0;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main section.sections .text .icon {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 1421px) {
+  .main section.sections .text {
+    width: 100%;
+    height: 450px;
+  }
+}
+@media only screen and (max-width: 411px) {
+  .main section.sections .text {
+    height: 550px;
+  }
+}
+.main section.sections .text p {
+  font-size: 1.2rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1421px) {
+  .main section.sections .text p {
+    font-size: 1.5rem;
+  }
+}
+.main section.sections .order-two {
+  order: 2;
+}
+@media only screen and (max-width: 1421px) {
+  .main section.sections .order-two {
+    order: -1;
+  }
+}
+.main section.sections .break {
+  display: block;
+}
+.main section.sections .icon {
+  text-align: center;
+  font-size: 3rem;
+}
+@media only screen and (max-width: 1421px) {
+  .main section.sections .icon {
+    font-size: 4rem;
+  }
+}
+.main section.sections .button {
+  color: white;
+  background: black;
+  font-size: 2rem;
+  padding: 10px;
+  border: 2px solid white;
+  display: block;
+  margin: 1em auto;
+  width: 40%;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media only screen and (max-width: 1491px) {
+  .main section.sections .button {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1421px) {
+  .main section.sections .button {
+    width: 300px;
+  }
+}
+.main section.sections .button:hover, .main section.sections .button:focus {
+  color: black;
+  background: white;
+  border: 2px solid black;
+}
+
+footer.footer {
+  color: white;
+  text-align: center;
+}
+footer.footer ul.links {
+  padding-top: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+footer.footer ul.links li {
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: -4px;
+  padding-left: 0;
+}
+footer.footer ul.links li a {
+  color: white;
+  text-decoration: none;
+}
+footer.footer ul.links li a:hover, footer.footer ul.links li a:focus {
+  text-decoration: underline;
+}
+footer.footer ul.links li::after {
+  content: " | ";
+}
+
+/*# sourceMappingURL=styles.css.map */

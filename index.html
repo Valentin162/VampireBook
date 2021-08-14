@@ -1,12 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Начало - Съществата на мрака - Пропаст</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<script src="https://kit.fontawesome.com/ee195e2c19.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h1>Hello, Git!</h1>
+	<header class="header">
+		<noscript>Внимание! JavaScript на вашия браузър е изключен, поради което някои части на сайта, като навигционното меню, няма да работят правилно.</noscript>
+		<a href="#" id="burger-menu" role="button" aria-label="Отвори навигационно меню">
+			<span class="fas fa-bars"></span>
+		</a>
+		<nav class="nav" id="desktop-menu">
+			<ul class="links">
+				<li><a href="index.html">Начало</a></li>
+				<li><a href="about-the-book.html">За книгата</a></li>
+				<li><a href="about-the-author.html">За автора</a></li>
+				<li><a href="sample.html">Проба от книгата</a></li>
+				<li><a href="contacts.html">Контакти</a></li>
+				<li><a href="#" target="_blank"><span lang="en">Wattpad</span></a></li>
+				<li class="buy-book"><a href="#" class="dropdown">Купи книгата <span class="fas fa-caret-down" aria-hidden="true"></span></a>
+					<ul id="stores">
+						<li><a href="#" target="_blank">Ciela1</a></li>
+						<li><a href="#" target="_blank">Ciela2</a></li>
+						<li><a href="#" target="_blank">Ciela3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div id="mobile-menu">
+		<h2>Навигационно меню</h2>
+		<nav class="nav">
+			<button id="close-menu" aria-label="Затвори навигационно меню">&#10005;</button>
+			<ul class="links">
+				<li><a href="index.html" id="home">Начало</a></li>
+				<li><a href="about-the-book.html">За книгата</a></li>
+				<li><a href="about-the-author.html">За автора</a></li>
+				<li><a href="sample.html">Проба от книгата</a></li>
+				<li><a href="contacts.html">Контакти</a></li>
+				<li><a href="#" target="_blank"><span lang="en">Wattpad</span></a></li>
+				<li>Купи книгата:
+					<ul>
+						<li><a href="#" target="_blank">Ciela1</a></li>
+						<li><a href="#" target="_blank">Ciela2</a></li>
+						<li><a href="#" target="_blank" id="last">Ciela3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<main class="main">
+		<div class="container">
+			<div class="banner">
+				<h1>Съществата на мрака - Пропаст</h1>
+			</div>
+			<div class="home">
+				<section class="about-the-book sections">
+					<div class="heading">
+						<h2>За книгата <span class="break fas fa-arrow-right" aria-hidden="true"></span></h2>
+					</div>
+					<div class="text">
+						<span class="break fas fa-book icon" aria-hidden="true"></span>
+						<p>Разбери повече за книгата и за какво се разказва и се запознай с главните герой: <b>Лиса Фортън</b>, <b>Роналд Олдън</b> и <b>Кларис Бейнхард</b>.</p>
+						<a href="about-the-book.html" class="button"><span class="far fa-arrow-alt-circle-right" aria-hidden="true"> Научи повече</span></a>
+					</div>
+				</section>
+				<section class="about-the-author sections">
+					<div class="heading order-two">
+						<h2 class="order-two">За автора <span class="break fas fa-arrow-left" aria-hidden="true"></span></h2>
+					</div>
+					<div class="text">
+						<span class="break fas fa-user-alt icon" aria-hidden="true"></span>
+						<p>Разбери повече за автора, Божидар Пенчев, и неговия авторски опит, личен живот и плановете му занапред, свързани и с книгата и с личния му живот.</p>
+						<a href="about-the-author.html" class="button"><span class="far fa-arrow-alt-circle-right" aria-hidden="true"> Научи повече</span></a>
+					</div>
+				</section>
+				<section class="sample sections">
+					<div class="heading">
+						<h2>Проба от книгата <span class="break fas fa-arrow-right" aria-hidden="true"></span></h2>
+					</div>
+					<div class="text">
+						<span class="break fas fa-file-pdf icon" aria-hidden="true"></span>
+						<p>Потопи се в книгата още сега с първите 44 страници от книгата, които са достъпн за всеки потребител напълно безплатно.</p>
+						<a href="sample.html" class="button"><span class="far fa-arrow-alt-circle-right" aria-hidden="true"> Научи повече</span></a>
+					</div>
+				</section>
+				<section class="contacts sections">
+					<div class="heading order-two">
+						<h2 class="order-two">Контакти <span class="break fas fa-arrow-left" aria-hidden="true"></span></h2>
+					</div>
+					<div class="text">
+						<span class="break fas fa-envelope-open icon" aria-hidden="true"></span>
+						<p>Интересуваш се от работа или друга форма на колаборация с автора или книгата? Научи как да се свържеш допълнително.</p>
+						<a href="contacts.html" class="button"><span class="far fa-arrow-alt-circle-right" aria-hidden="true"> Научи повече</span></a>
+					</div>
+				</section>
+				<section class="wattpad sections">
+					<div class="heading">
+						<h2 lang="en">Wattpad <span class="break fas fa-arrow-right" aria-hidden="true"></span></h2>
+					</div>
+					<div class="text">
+						<span class="break fas fa-comment icon" aria-hidden="true"></span>
+						<p>Дръж се в течение с най-актуалните новини и събития, свързани с книгата. Следи повече за книгата на нейната страница в <span lang="en">Wattpad</span>.</p>
+						<a href="#" class="button" target="_blank"><span class="far fa-arrow-alt-circle-right" aria-hidden="true"> <span lang="en">Wattpad</span></span></a>
+					</div>
+				</section>
+				<section class="buy sections" style="border: none;">
+					<div class="heading order-two">
+						<h2>Купи книгата <span class="break fas fa-arrow-left" aria-hidden="true"></span></h2>
+					</div>
+					<div class="text">
+						<span class="break fas fa-shopping-cart icon" aria-hidden="true"></span>
+						<p>Решил си да направиш първи стъпки в <em>мрака</em>? Можеш д закупиш книгата само с няколко клика в онлайн магазините на <b lang="en">Ciela</b>, <b lang="en">Ciela2</b> и <b lang="en">Ciela3</b>.</p>
+						<a href="#" class="button" target="_blank"><span class="far fa-arrow-alt-circle-right" aria-hidden="true"> <span lang="en">Ciela</span></span></a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<ul class="links">
+			<li><a href="index.html">Начало</a></li>
+			<li><a href="about-the-book.html">За книгата</a></li>
+			<li><a href="about-the-author.html">За автора</a></li>
+			<li><a href="sample.html">Проба от книгата</a></li>
+			<li><a href="contacts.html">Контакти</a></li>
+			<li><a href="#"><span lang="en">Wattpad</span></a></li>
+		</ul>
+		<p>Всички права запазени &copy; 2021</p>
+	</footer>
+	<script src="./js/scripts.js"></script>
 </body>
 </html>

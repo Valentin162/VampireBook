@@ -1,0 +1,39 @@
+$gray: #444;
+$red: #600;
+$green: #003321;
+$blue: #020148;
+$dark-blue: #060B36;
+$light-blue: #192375;
+$bg: linear-gradient(180deg, #88231C 1.27%, #814033 48.14%, #2B231F 101.27%);
+
+@mixin opaque {
+	background: #7E7E7E;
+	opacity: 0.3;
+}
+
+@mixin flex-center($wrap: false) {
+	display: flex;
+	justify-content: center;
+	@if $wrap {
+		flex-wrap: wrap;
+	}
+}
+
+@mixin flex-vertical-center($wrap: false) {
+	display: flex;
+	align-items: center;
+
+	@if $wrap {
+		flex-wrap: wrap;
+	}
+}
+
+@mixin block-center {
+	display: block;
+	margin: 1em auto;
+}
+
+@mixin sticky {
+	position: sticky;
+	top: 0;
+}

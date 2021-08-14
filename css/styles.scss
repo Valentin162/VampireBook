@@ -1,0 +1,406 @@
+@import './mixins-variables.scss';
+@import './components/main.scss';
+@import './components/nav.scss';
+@import './components/footer.scss';
+@import './components/header.scss';
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 0;
+	margin: 0;
+	color: white;
+	background: $green;
+}
+
+.fixed {
+	position: fixed;
+}
+
+p {
+	line-height: 1.5;
+}
+
+// header
+
+header.header {
+	position: relative;
+	background: $blue;
+	margin: 0;
+	padding: 0;
+	top: 0;
+
+	@media only screen and (max-width: 950px) {
+		height: 85px;
+	}
+
+	#burger-menu {
+		display: none;
+		float: right;
+		color: white;
+		font-size: 3em;
+		background: #f33;
+		padding: 15px;
+
+		&:hover, &:focus {
+			color: black;
+			background: white;
+			transition: color 0.5s, background-color 0.5s;
+		}
+
+		@media only screen and (max-width: 950px) {
+			display: block;
+		}
+	}
+}
+
+
+// nav
+
+nav#desktop-menu {
+	margin: 0;
+	padding: 20px;
+
+	& > ul.links {
+		padding-top: 0;
+		margin: 0;
+		list-style: none;
+		text-align: center;
+
+		@media only screen and (max-width: 950px) {
+			display: none;
+		}
+
+		& > li {
+			display: inline-block;
+			font-size: 1rem;
+  			margin-left: -4px;
+  			padding-left: 0;
+
+			& > a {
+				color: white;
+				text-decoration: none;
+				height: 100%;
+				padding: 15px;
+
+				&:hover, &:focus {
+					transition: color 0.5s, background-color 0.5s;
+					color: black;
+					background: white;
+					border-bottom: 5px solid $red;
+				}
+			}
+		}
+
+		.buy-book {
+			position: relative;
+			display: inline-block;
+			& > ul {
+				position: absolute;
+				display: none;
+				padding-left: 0;
+				width: 150px;
+				margin-top: 20px;
+				& > li {
+					display: block;
+					width: 100%;
+					background: $blue;
+					height: 100%;
+					width: 157px;
+					@include flex-vertical-center;
+					text-align: center;
+					& > a {
+						color: white;
+						text-decoration: none;
+						padding: 30px;
+						width: 100%;
+
+						&:hover, &:focus {
+							background: white;
+							color: black;
+						}
+					}
+				}
+			}
+
+			&:focus > ul {
+				display: block;
+			}
+		}
+	}
+}
+
+#mobile-menu {
+	top: 0;
+	@include flex-vertical-center;
+	@include flex-center;
+	flex-direction: column;
+	display: none; // default
+	position: fixed;
+	z-index: 4;
+	background: black;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	padding: 15px;
+
+	&.shown {
+		display: flex;
+	}
+
+	h2 {
+		font-size: 3em;
+		margin-top: 7em;
+		@media only screen and (max-width: 400px) {
+			font-size: 2em;
+		}
+
+	}
+
+	ul.links {
+		list-style: none; 
+		padding-left: 0;
+		font-size: 2rem;
+
+		li {
+			margin-bottom: 15px;
+			a {
+				color: white;
+				text-decoration: none;
+				margin-bottom: 10px;
+				&:hover, &:focus {
+					text-decoration: underline;
+				}
+			}
+
+			ul {
+				list-style: none;
+				padding-top: 10px;
+				li {
+					a {
+						text-decoration: underline;
+					}
+					&::before {
+						content: '- ';
+					}
+				}
+			}
+		}
+	}
+
+	button#close-menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 3em;
+		background: none;
+		font-weight: bold;
+		color: white;
+		border: none;
+		cursor: pointer;
+		border-radius: 10px;
+		padding: 15px;
+		&:focus, &:hover {
+			color: black;
+			background: white;
+			transition: color 0.5s, background-color 0.5s;
+		}
+	}
+}
+
+// main
+
+.main {
+	background: $bg;
+	margin-top: 0;
+
+	h1 {
+		margin-top: 0;
+		text-align: center;
+		margin-bottom: 2.5em;
+		width: 100%;
+		height: auto;
+		line-height: 150px;
+		margin-bottom: 0;
+		font-size: 3.5em;
+		white-space: wrap;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	.break {
+		display: block;
+	}
+
+	.container {
+		width: 90%;
+		@include block-center;
+		margin-top: 0;
+		background-image: url('../assets/images/cover.png');
+		background-position: center;
+		background-attachment: fixed;
+		@media only screen and (max-width: 1421px) {
+			width: 100%;
+		}
+	}
+
+
+	section.sections {
+		margin-bottom: 0;
+		border-bottom: 2px solid white;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		@media only screen and (max-width: 1421px) {
+			flex-direction: column;
+
+			.fa-arrow-right {
+				transform: rotate(90deg);
+			}
+
+			.fa-arrow-left {
+				transform: rotate(270deg);
+			}
+
+			.fa-arrow-left, .fa-arrow-right {
+				margin-top: 5px;
+			}
+		}
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 3rem;
+		}
+
+		.heading {
+			width: 50%;
+			background: $dark-blue;
+			height: 300px;
+			@include flex-vertical-center;
+			@include flex-center;
+			@media only screen and (max-width: 1421px) {
+				width: 100%;
+				height: 450px;
+			}
+		}
+
+		.text {
+			background: $light-blue;
+			width: 50%;
+			margin-bottom: 0;
+			margin-top: 0;
+			height: 300px;
+			padding: 20px;
+			.icon {
+				margin-top: 20px;
+			}
+			@include flex-center;
+			@include flex-vertical-center;
+			flex-direction: column;
+			@media only screen and (max-width: 1421px) {
+				width: 100%;
+				height: 450px;
+			}
+
+			@media only screen and (max-width: 411px) {
+				height: 550px;
+			}
+
+			p {
+				font-size: 1.2rem;
+				width: 90%;	// align text to the left, but keep it in the center
+				margin-left: auto;
+				margin-right: auto;
+				@media only screen and (max-width: 1421px) {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		.order-two {
+			order: 2;
+			@media only screen and (max-width: 1421px) {
+				order: -1;
+			}
+		}
+
+		.break {
+			display: block;
+		}
+
+		.icon {
+			text-align: center;
+			font-size: 3rem;
+			@media only screen and (max-width: 1421px) {
+				font-size: 4rem;
+			}
+		}
+
+		.button {
+			color: white;
+			background: black;
+			font-size: 2rem;
+			padding: 10px;
+			border: 2px solid white;
+			@include block-center;
+			width: 40%;
+			text-align: center;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+			@media only screen and (max-width: 1491px) {
+				width: 60%;
+			}
+
+			@media only screen and (max-width: 1421px) {
+				width: 300px;
+			}
+
+			&:hover, &:focus {
+				color: black;
+				background: white;
+				border: 2px solid black;
+			}
+		}
+	}
+}
+
+// footer
+
+footer.footer {
+	color: white;
+	text-align: center;
+
+	ul.links {
+		padding-top: 0;
+		margin: 0;
+		list-style: none;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			font-size: 1rem;
+  			margin-left: -4px;
+  			padding-left: 0;
+			a {
+				color: white;
+				text-decoration: none;
+
+				&:hover, &:focus {
+					text-decoration: underline;
+				}
+			}
+
+			&::after {
+				content: ' | ';
+			}
+		}
+	}
+}
+
+
