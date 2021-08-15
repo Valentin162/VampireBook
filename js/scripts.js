@@ -12,7 +12,36 @@ window.addEventListener('DOMContentLoaded', event => {
 	home = document.querySelector('#home'),
 	about = document.querySelector('#about'),
 	anchor = document.querySelector('a'),
-	lastMobileLink = document.querySelector('#last');
+	anchors = document.querySelectorAll('a'),
+	lastMobileLink = document.querySelector('#last'),
+	buy = document.querySelector('#buy'),
+	dataLink = document.querySelectorAll('[data-link]');
+
+	function addTabIndex() {
+		let links = document.querySelectorAll('[data-target]');
+
+		links.forEach(function(link) {
+			link.tabIndex = '0';
+		});
+	}
+
+	function removeTabIndex() {
+		let links = document.querySelectorAll('[data-target]');
+
+		links.forEach(function(link) {
+			link.tabIndex = '-5';
+		});
+	}
+
+	function toggleStores(action = 'show') {
+		if (action === 'show') {
+			addTabIndex();
+			stores.style.zIndex = '10';
+		} else {
+			removeTabIndex();
+			stores.style.zIndex = '-5';
+		}
+	}
 
 	menu.addEventListener('click', function(event) {
 		event.preventDefault();
@@ -28,11 +57,17 @@ window.addEventListener('DOMContentLoaded', event => {
 		body.classList.remove('fixed');
 	});
 	
-	lastMobileLink.addEventListener('focusout', function() {
-		if (document.activeElement !== close) {
-			close.focus();
-		}
-	});
+	for (let i = 0; i < dataLink.length; i++) {
+		dataLink[i].addEventListener('focusout', function(event) {
+			if (event.relatedTarget.dataset.link !== 'mobile-link') {
+				if (i === 0) {
+					close.focus()
+				} else if (i === dataLink.length - 1) {
+					home.focus();
+				}
+			}
+		});
+	}
 
 	document.addEventListener('click', function(event) {
 		if (event.target === mobile || event.target === h2) {
@@ -41,7 +76,41 @@ window.addEventListener('DOMContentLoaded', event => {
 		}
 
 		if (event.target !== anchor) {
-			stores.style.display = 'none';
+			toggleStores('hide');
+		}
+	});
+
+	buy.addEventListener('mouseover', function() {
+		toggleStores('show');
+	});
+
+	buy.addEventListener('click', function(event) {
+		event.preventDefault();
+	})
+
+	stores.addEventListener('mouseleave', function(event) {
+		event.stopPropagation();
+		toggleStores('hide');
+	});
+
+	buy.addEventListener('focusin', function() {
+		toggleStores('show');
+	});
+
+	buy.addEventListener('focusout', function(event) {
+		if (event.relatedTarget === document.querySelector('#wattpad')) {
+			toggleStores('hide');
+		}
+	});
+
+	lastLink.addEventListener('focusout', function(event) {
+
+		window.onerror = function() {
+			return true;
+		}
+
+		if (event.relatedTarget.dataset.target !== 'link') {
+			toggleStores('hide');
 		}
 	});
 });

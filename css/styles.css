@@ -88,7 +88,7 @@ nav#desktop-menu > ul.links .buy-book {
 }
 nav#desktop-menu > ul.links .buy-book > ul {
   position: absolute;
-  display: none;
+  z-index: -5;
   padding-left: 0;
   width: 150px;
   margin-top: 20px;
@@ -112,9 +112,6 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a {
 nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul.links .buy-book > ul > li > a:focus {
   background: white;
   color: black;
-}
-nav#desktop-menu > ul.links .buy-book:hover > ul {
-  display: block;
 }
 
 #mobile-menu {
