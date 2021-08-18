@@ -453,6 +453,33 @@ nav#desktop-menu {
 	}
 }
 
+
+// about the author
+
+.author {
+	background: $dark-blue;
+	.biography {
+		@include flex-center;
+		@include flex-vertical-center;
+		flex-direction: row;
+		padding: 40px;
+		gap: 20px;
+
+		@media only screen and (max-width: 1080px) {
+			flex-direction: column;
+		}
+	}
+
+	.heading {
+		background: $light-blue;
+		font-size: 2rem;
+		padding: 20px;
+		height: 150px;
+		@include flex-vertical-center;
+		@include flex-center;
+	}
+}
+
 // footer
 
 footer.footer {
