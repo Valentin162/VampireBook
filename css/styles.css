@@ -464,6 +464,37 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
   justify-content: center;
 }
 
+.contacts {
+  background: #060B36;
+}
+.contacts .heading {
+  background: #192375;
+  font-size: 2rem;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.contacts .left-align {
+  text-align: center;
+  padding: 30px;
+}
+.contacts .left-align ul.list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 2em;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 0;
+}
+.contacts p {
+  font-size: 1.5em;
+  padding: 30px;
+  margin-top: 0;
+}
+
 footer.footer {
   color: white;
   text-align: center;
