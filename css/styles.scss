@@ -520,7 +520,7 @@ nav#desktop-menu {
 .sample {
 	background: $dark-blue;
 
-	embed {
+	object {
 		@include block-center;
 		width: 90%;
 		height: 500px;

@@ -498,14 +498,14 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
 .sample {
   background: #060B36;
 }
-.sample embed {
+.sample object {
   display: block;
   margin: 1em auto;
   width: 90%;
   height: 500px;
 }
 @media only screen and (max-width: 850px) {
-  .sample embed {
+  .sample object {
     width: 100%;
   }
 }
