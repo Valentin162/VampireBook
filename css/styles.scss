@@ -515,6 +515,59 @@ nav#desktop-menu {
 	}
 }
 
+// sample
+
+.sample {
+	background: $dark-blue;
+
+	embed {
+		@include block-center;
+		width: 90%;
+		height: 700px;
+	}
+
+	.heading {
+		background: $light-blue;
+		font-size: 2rem;
+		padding: 20px;
+		height: 150px;
+		@include flex-vertical-center;
+		@include flex-center;
+	}
+
+	.left-align {
+		text-align: center;
+		padding: 30px;
+		ul.list {
+			list-style: none;
+			padding-left: 0;
+			font-size: 2em;
+			display: inline-block;
+			text-align: left;
+			margin-bottom: 0;
+
+			li {
+				margin-bottom: 30px;
+			}
+
+			a {
+				color: white;
+				padding: 10px;
+
+				&:hover {
+					background:#cc5c00;
+				}
+
+				span {
+					text-decoration: none;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+
+}
+
 // footer
 
 footer.footer {
