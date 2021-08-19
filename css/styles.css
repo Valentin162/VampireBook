@@ -489,6 +489,9 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
   text-align: left;
   margin-bottom: 0;
 }
+.contacts .left-align ul.list li {
+  margin-bottom: 2em;
+}
 .contacts p {
   font-size: 1.5em;
   padding: 30px;
