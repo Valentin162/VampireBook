@@ -502,7 +502,7 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
   display: block;
   margin: 1em auto;
   width: 90%;
-  height: 500px;
+  height: 700px;
 }
 @media only screen and (max-width: 850px) {
   .sample object {
