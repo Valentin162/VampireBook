@@ -504,6 +504,11 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
   width: 90%;
   height: 700px;
 }
+@media only screen and (max-width: 850px) {
+  .sample embed {
+    width: 100%;
+  }
+}
 .sample .heading {
   background: #192375;
   font-size: 2rem;
