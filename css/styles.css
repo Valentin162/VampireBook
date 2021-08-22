@@ -30,24 +30,6 @@ p {
   line-height: 1.5;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
-.heading {
-  background: #192375;
-  font-size: 2rem;
-  padding: 20px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
 header.header {
   position: relative;
   background: #020148;
@@ -146,6 +128,10 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
 
 #mobile-menu {
   top: 0;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   display: none;
   position: fixed;
@@ -393,6 +379,16 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
 .about {
   background: #060B36;
 }
+.about .heading {
+  background: #192375;
+  font-size: 2rem;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 .about .order-two {
   order: 2;
 }
@@ -402,6 +398,10 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
   }
 }
 .about .description {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 5%;
@@ -417,6 +417,10 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
   font-style: italic;
 }
 .about .characters {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 20px;
@@ -436,6 +440,10 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
   background: #060B36;
 }
 .author .biography {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   flex-direction: row;
   padding: 40px;
   gap: 20px;
@@ -445,9 +453,29 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
     flex-direction: column;
   }
 }
+.author .heading {
+  background: #192375;
+  font-size: 2rem;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
 .contacts {
   background: #060B36;
+}
+.contacts .heading {
+  background: #192375;
+  font-size: 2rem;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .contacts .left-align {
   text-align: center;
@@ -483,6 +511,16 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
   .sample object {
     width: 100%;
   }
+}
+.sample .heading {
+  background: #192375;
+  font-size: 2rem;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .sample .left-align {
   text-align: center;

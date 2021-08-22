@@ -34,20 +34,6 @@ p {
 	line-height: 1.5;
 }
 
-.flex-center {
-	@include flex-center;
-	@include flex-vertical-center;
-}
-
-.heading {
-	background: $light-blue;
-	font-size: 2rem;
-	padding: 20px;
-	height: 150px;
-	@include flex-vertical-center;
-	@include flex-center;
-}
-
 // header
 
 header.header {
@@ -155,8 +141,8 @@ nav#desktop-menu {
 
 #mobile-menu {
 	top: 0;
-	// @include flex-vertical-center;
-	// @include flex-center;
+	@include flex-vertical-center;
+	@include flex-center;
 	flex-direction: column;
 	display: none; // default
 	position: fixed;
@@ -411,6 +397,14 @@ nav#desktop-menu {
 
 .about {
 	background: $dark-blue;
+	.heading {
+		background: $light-blue;
+		font-size: 2rem;
+		padding: 20px;
+		height: 150px;
+		@include flex-vertical-center;
+		@include flex-center;
+	}
 
 	.order-two {
 		order: 2;
@@ -420,6 +414,8 @@ nav#desktop-menu {
 	}
 
 	.description {
+		@include flex-center;
+		@include flex-vertical-center;
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 5%;
@@ -438,6 +434,8 @@ nav#desktop-menu {
 	}
 
 	.characters {
+		@include flex-center;
+		@include flex-vertical-center;
 		flex-direction: row;
 		flex-wrap: wrap;
 		padding: 20px;
@@ -461,6 +459,8 @@ nav#desktop-menu {
 .author {
 	background: $dark-blue;
 	.biography {
+		@include flex-center;
+		@include flex-vertical-center;
 		flex-direction: row;
 		padding: 40px;
 		gap: 20px;
@@ -469,12 +469,30 @@ nav#desktop-menu {
 			flex-direction: column;
 		}
 	}
+
+	.heading {
+		background: $light-blue;
+		font-size: 2rem;
+		padding: 20px;
+		height: 150px;
+		@include flex-vertical-center;
+		@include flex-center;
+	}
 }
 
 // contacts 
 
 .contacts {
 	background: $dark-blue;
+
+	.heading {
+		background: $light-blue;
+		font-size: 2rem;
+		padding: 20px;
+		height: 150px;
+		@include flex-vertical-center;
+		@include flex-center;
+	}
 
 	.left-align {
 		text-align: center;
@@ -518,6 +536,15 @@ nav#desktop-menu {
 		@media only screen and (max-width: 850px) {
 			width: 100%;
 		}
+	}
+
+	.heading {
+		background: $light-blue;
+		font-size: 2rem;
+		padding: 20px;
+		height: 150px;
+		@include flex-vertical-center;
+		@include flex-center;
 	}
 
 	.left-align {
