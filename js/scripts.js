@@ -113,17 +113,4 @@ window.addEventListener('DOMContentLoaded', event => {
 			toggleStores('hide');
 		}
 	});
-
-	console.log(navigator.userAgent);
-
-	if (navigator.userAgent.toLowerCase() === 'chrome') {
-		document.querySelector('object').remove();
-		document.querySelector('.safari').appendChild(document.createElement('p'));
-		document.querySelector('.safari p').textContent = 'За съжаление, пробата не може да бъде показана. Моля изтеглете файла от долу (.pdf, .docx или .doc)';
-		document.querySelector('.safari p').style.textAlign = 'center';
-	} else {
-		document.querySelector('.safari').prepend(document.createElement('p'));
-		document.querySelector('.safari p').style.textAlign = 'center';
-		document.querySelector('.safari p').textContent = 'Може също да изтеглите пробата по-долу в формат .pdf, .docx или .doc!';
-	}
 });
