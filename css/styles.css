@@ -473,9 +473,6 @@ nav#desktop-menu > ul.links .buy-book > ul > li > a:hover, nav#desktop-menu > ul
 .sample {
   background: #060B36;
 }
-.sample .safari {
-  background: white;
-}
 .sample object {
   display: block;
   margin: 1em auto;
