@@ -6,14 +6,10 @@ window.addEventListener('DOMContentLoaded', event => {
 	close = document.querySelector('#close-menu'),
 	body = document.querySelector('body'),
 	h2 = document.querySelector('h2'),
-	dropdown = document.querySelector('.dropdown'),
 	stores = document.querySelector('#stores'),
 	lastLink = stores.lastElementChild,
 	home = document.querySelector('#home'),
-	about = document.querySelector('#about'),
 	anchor = document.querySelector('a'),
-	anchors = document.querySelectorAll('a'),
-	lastMobileLink = document.querySelector('#last'),
 	buy = document.querySelector('#buy'),
 	dataLink = document.querySelectorAll('[data-link]');
 
@@ -86,7 +82,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 	buy.addEventListener('click', function(event) {
 		event.preventDefault();
-	})
+	});
 
 	stores.addEventListener('mouseleave', function(event) {
 		event.stopPropagation();
