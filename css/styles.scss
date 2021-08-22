@@ -524,6 +524,10 @@ nav#desktop-menu {
 .sample {
 	background: $dark-blue;
 
+	.safari {
+		background: white;
+	}
+
 	object {
 		@include block-center;
 		width: 90%;
