@@ -113,4 +113,8 @@ window.addEventListener('DOMContentLoaded', event => {
 			toggleStores('hide');
 		}
 	});
+
+	if (navigator.userAgent.includes('Safari')) {
+		console.log('SHREK IS LOVE');
+	}
 });
